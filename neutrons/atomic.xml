@@ -1,4 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    
-</manifest>    
+
+  <remote name="atom"
+           fetch="https://github.com/neutronos"
+           revision="ten"
+	       review="" />
+
+ <!--BUILD-->
+  <project path="android" name="atomic_manifest" remote="atom"/>
+  <project path="build/make" name="atomic_build" remote="atom" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="atomic_build_soong" remote="atom" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+ <!--VENDOR-->
+  <project path="vendor/neutron" name="atomic_vendor_neutron" remote="atom"/>
+
+ <!--Lineage-Sdk-->
+  <project path="lineage-sdk" name="atomoic_lineage-sdk" remote="atom"/>
+
+  <!--Apps-->
+  <project path="packages/apps/Settings" name="atomic_packages_apps_Settings" remote="atom" />
+  <project path="packages/apps/Updater" name="atomic_packages_apps_Updater" remote="atom"/>
+  <project path="packages/apps/SetupWizard" name="atomic_packages_apps_SetupWizard" remote="atom" />
+  <project path="packages/apps/Backgrounds" name="atomic_packages_apps_Backgrounds" remote="atom" />
+
+  <!--Frameworks-->
+  <project path="frameworks/base" name="atomic_frameworks_base" remote="atom" />
+
+  <!--Device-->
+  <project path="device/neutron/sepolicy" name="atomic_device_neutron_sepolicy" remote="atom" />
+  <project path="device/qcom/sepolicy" name="atomic_device_qcom_sepolicy" remote="atom" />
+  <project path="device/qcom/sepolicy-legacy" name="atomic_device_qcom_sepolicy-legacy" remote="atom" />
+  <project path="device/qcom/sepolicy-legacy-um" name="atomic_device_qcom_sepolicy-legacy-um" remote="atom" />
+
+</manifest>
