@@ -26,7 +26,7 @@
   <project path="vendor/neutron" name="atomic_vendor_neutron" remote="atom"/>
 
  <!--Lineage-Sdk-->
-  <project path="lineage-sdk" name="atomoic_lineage-sdk" remote="atom"/>
+  <project path="lineage-sdk" name="atomic_lineage-sdk" remote="atom"/>
 
   <!--Apps-->
   <project path="packages/apps/Settings" name="atomic_packages_apps_Settings" remote="atom" />
