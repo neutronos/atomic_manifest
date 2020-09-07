@@ -9,7 +9,7 @@ familiar with [Repo](https://source.android.com/source/using-repo.html) and [Ver
 
 To initialize your local repository using the LineageOS trees, use a command like this:
 ```
-repo init -u git://github.com/neutronos/atomic_manifest.git -b ten
+repo init -u https://github.com/neutronos/atomic_manifest.git -b ten
 ```
 Then to sync up:
 ```
