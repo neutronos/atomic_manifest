@@ -5,11 +5,6 @@
            fetch="https://github.com/neutronos"
            revision="ten"
 	       review="" />
-	
-<remote name="404"
-	fetch="https://github.com/p-404"
-	revision="qemu"
-	review="" />
 
  <!--BUILD-->
   <project path="android" name="atomic_manifest" remote="atom"/>
@@ -38,7 +33,7 @@
   <project path="packages/apps/Updater" name="atomic_packages_apps_Updater" remote="atom"/>
   <project path="packages/apps/SetupWizard" name="atomic_packages_apps_SetupWizard" remote="atom" />
   <project path="packages/apps/Backgrounds" name="atomic_packages_apps_Backgrounds" remote="atom" />
-  <project path="packages/apps/404Launcher"  name="platform_packages_apps_404Launcher" remote="404" /> 
+  <project path="packages/apps/404Launcher"  name="atomic_packages_apps_404Launcher" remote="atom" /> 
 
   <!--Frameworks-->
   <project path="frameworks/base" name="atomic_frameworks_base" remote="atom" />
