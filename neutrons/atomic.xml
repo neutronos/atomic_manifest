@@ -5,6 +5,10 @@
            fetch="https://github.com/neutronos"
            revision="ten"
 	       review="" />
+	
+  <remote name="pixys-gitlab"
+          fetch="https://gitlab.com/PixysOS"
+          revision="ten" />	
 
  <!--BUILD-->
   <project path="android" name="atomic_manifest" remote="atom"/>
@@ -43,5 +47,7 @@
   <project path="device/qcom/sepolicy" name="atomic_device_qcom_sepolicy" remote="atom" />
   <project path="device/qcom/sepolicy-legacy" name="atomic_device_qcom_sepolicy-legacy" remote="atom" />
   <project path="device/qcom/sepolicy-legacy-um" name="atomic_device_qcom_sepolicy-legacy-um" remote="atom" />
+	
+    <project path="vendor/gapps" name="vendor_gapps" remote="pixys-gitlab" />		
 
 </manifest>
