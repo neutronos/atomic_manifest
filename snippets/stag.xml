@@ -49,6 +49,7 @@
 <!-- Now to track with elegance -->
   <project path="frameworks/av" name="android_frameworks_av" remote="stag" />
   <project path="frameworks/base" name="android_frameworks_base" remote="stag" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="stag" />
   <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="stag" />
   <project path="bionic" name="android_bionic" remote="stag" />
   <project path="bootable/recovery" name="android_bootable_recovery" remote="stag" />
