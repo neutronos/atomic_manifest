@@ -83,7 +83,7 @@
 
 
   <!-- QCOM CAF -->
-  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" remote="potato-next" >
+  <project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" remote="stag" >
     <!-- add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
     <!-- for AOSP sdm845, we override os_pickup.mk -->
