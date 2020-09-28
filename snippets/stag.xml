@@ -57,6 +57,7 @@
   <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="stag" />
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="stag" />
   <project path="hardware/interfaces" name="android_hardware_interfaces" remote="stag" />
+  <project path="hardware/stag/interfaces" name="android_hardware_stag_interfaces" remote="stag" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="stag" />
   <project path="external/selinux" name="android_external_selinux" remote="stag" />
   <project path="external/tinycompress" name="android_external_tinycompress" remote="stag" /> 
