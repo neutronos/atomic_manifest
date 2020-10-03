@@ -12,9 +12,8 @@
   <remote name="gitlab"
           fetch="https://gitlab.com/" />
 
-  <remote  name="lineage-17"
-          fetch="https://github.com/LineageOS"
-          revision="lineage-17.1" />
+  <remote  name="lineage-x"
+          fetch="https://github.com/LineageOS" />
 
   <remote name="arrow-11"
           fetch="https://github.com/ArrowOS/"/>        
@@ -65,6 +64,7 @@
 
   <!-- Packages Repos -->
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="pixys" />
+  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="lineage-x" revision="lineage-18.0"/>
 
   <!-- Prebuilts Repos -->
   <project path="prebuilts/abi-dumps/vndk" name="prebuilts_abi-dumps_vndk" remote="pixys" />
@@ -81,5 +81,5 @@
 
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="android_prebuilts_gcc_linux-x86_host_x86_64-linux-glibc2.17-4.8" remote="arrow-11" clone-depth="1" revision="arrow-11.0" />
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_platform_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="arrow-11" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" clone-depth="1" remote="lineage-17" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" clone-depth="1" remote="lineage-x" revision="lineage-17.1" />
 </manifest>
