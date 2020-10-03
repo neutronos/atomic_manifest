@@ -15,7 +15,7 @@
   <remote  name="lineage-x"
           fetch="https://github.com/LineageOS" />
 
-  <remote name="arrow-11"
+  <remote name="arrow"
           fetch="https://github.com/ArrowOS/"/>        
 
   <project path="bionic" name="bionic" remote="pixys" />
@@ -79,7 +79,12 @@
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="pixys" /> 
   <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="pixys" />
 
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="android_prebuilts_gcc_linux-x86_host_x86_64-linux-glibc2.17-4.8" remote="arrow-11" clone-depth="1" revision="arrow-11.0" />
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_platform_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="arrow-11" clone-depth="1" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="android_prebuilts_gcc_linux-x86_host_x86_64-linux-glibc2.17-4.8" remote="arrow" clone-depth="1" revision="arrow-11.0" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_platform_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="arrow" clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" clone-depth="1" remote="lineage-x" revision="lineage-17.1" />
+
+  <!--hals from arrow-->
+  <project path="hardware/qcom-caf/sm8150/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-11.0-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-11.0-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-11.0-caf-sm8150" />
 </manifest>
