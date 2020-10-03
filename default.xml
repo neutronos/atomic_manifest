@@ -828,7 +828,7 @@
   <!-- Lineage repos -->
   <include name="snippets/los.xml" />
 
-  <!-- Pixys repos -->
-  <include name="snippets/pixys.xml" />
+  <!-- atomic repos -->
+  <include name="snippets/atomic.xml" />
 
 </manifest>
