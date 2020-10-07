@@ -830,5 +830,11 @@
 
   <!-- atomic repos -->
   <include name="snippets/atomic.xml" />
+  
+  <!-- arrow repos -->
+  <include name="snippets/arrow.xml" />
+
+  <!-- pixys repos -->
+  <include name="snippets/pixys.xml" />
 
 </manifest>

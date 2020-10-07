@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="pixys"
-          fetch="https://github.com/PixysOS-Beta/"
-          revision="eleven"
-          review="gerrit.pixysos.com" />
-
   <remote name="atom"
         fetch="https://github.com/neutronos/"
         revision="eleven" />        
@@ -16,17 +11,8 @@
   <remote name="gitlab"
           fetch="https://gitlab.com/" />
 
-  <remote  name="lineage-x"
-          fetch="https://github.com/LineageOS" />
-
-  <remote name="arrow"
-          fetch="https://github.com/ArrowOS/"/>        
-
-  <project path="bionic" name="bionic" remote="pixys" />
-  <project path="bootable/recovery" name="bootable_recovery" remote="pixys" />
-
   <!-- Build Repos -->
-  <project path="build/make" name="build" groups="pdk" remote="pixys" >
+  <project path="build/make" name="atomic_build" groups="pdk" remote="atom" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -36,62 +22,22 @@
     <linkfile src="tools" dest="build/tools" />
   </project>
 
-  <project path="build/blueprint" name="build_blueprint" groups="pdk,tradefed" remote="pixys" />
-  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="pixys" >
+  <project path="build/soong" name="atomic_build_soong" groups="pdk,tradefed" remote="atom" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
-  <!-- CodeAurora additions -->
-  <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="vendor_nxp_opensource_external_libnfc-nci" remote="pixys" />
-  <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="vendor_nxp_opensource_packages_apps_Nfc" remote="pixys" />
-  <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" groups="qcom,pdk-qcom" remote="pixys" />
-
-  <!-- External Repos -->
-  <project path="external/selinux" name="external_selinux" remote="pixys" />
-  <project path="external/tinycompress" name="external_tinycompress" remote="pixys" />
-
   <!-- Frameworks Repos -->
-  <project path="frameworks/av" name="frameworks_av" remote="pixys" />
   <project path="frameworks/base" name="atomic_frameworks_base" remote="atom" />
-  <project path="frameworks/native" name="frameworks_native" remote="pixys" />
-  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="pixys" />
 
-  <!-- Hardware repos -->
-  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="pixys" />
-  <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" groups="qcom_wlan" remote="pixys" />
-
-  <!-- Pixys Repos -->
-  <project path="vendor/pixys" name="vendor_pixys" remote="pixys" />
-  <project path="device/pixys/sepolicy" name="device_pixys_sepolicy" remote="pixys" />
-  <project path="hardware/pixys/interfaces" name="hardware_pixys_interfaces" remote="pixys" />
+  <!-- Neutron Repos -->
+  <project path="vendor/neutron" name="atomic_vendor_neutron" remote="atom" />
+  <project path="device/neutron/sepolicy" name="device_neutron_sepolicy" remote="atom" />
+  <project path="hardware/neutron/interfaces" name="hardware_neutron_interfaces" remote="atom" />
 
   <!-- Packages Repos -->
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="pixys" />
-  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="lineage-x" revision="lineage-18.0"/>
-
-  <!-- Prebuilts Repos -->
-  <project path="prebuilts/abi-dumps/vndk" name="prebuilts_abi-dumps_vndk" remote="pixys" />
-
-  <!-- System Repos -->
-  <project path="system/bt" name="system_bt" groups="pdk" remote="pixys" />
-  <project path="system/core" name="system_core" remote="pixys" />
-  <project path="system/sepolicy" name="system_sepolicy" remote="pixys" />
-
-  <!-- Sepolicy -->
-  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="pixys" />
-  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="pixys" /> 
-  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="pixys" />
-
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="android_prebuilts_gcc_linux-x86_host_x86_64-linux-glibc2.17-4.8" remote="arrow" clone-depth="1" revision="arrow-11.0" />
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_platform_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="arrow" clone-depth="1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" clone-depth="1" remote="lineage-x" revision="lineage-17.1" />
-
-  <!--hals from arrow-->
-  <project path="hardware/qcom-caf/sm8150/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-11.0-caf-sm8150" />
-  <project path="hardware/qcom-caf/sm8150/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-11.0-caf-sm8150" />
-  <project path="hardware/qcom-caf/sm8150/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-11.0-caf-sm8150" />
-
-  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="lineage-x" revision="lineage-17.1" />
-  <project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" remote="lineage-x" revision="lineage-17.1" />
+  <project path="packages/apps/Settings" name="atomic_packages_apps_Settings" remote="atom" />
+  <project path="packages/apps/ThemePicker" name="atomic_packages_apps_ThemePicker" remote="atom" />   
+  <project path="packages/apps/Launcher3" name="atomic_packages_apps_Launcher3" remote="atom" />  
+  <project path="packages/overlays/Themes" name="atomic_packages_overlays_Themes" remote="atom" />    
 </manifest>
