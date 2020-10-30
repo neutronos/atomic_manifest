@@ -79,7 +79,6 @@
   <remove-project name="platform/packages/apps/DevCamera" />
   <remove-project name="platform/packages/apps/Protips" />
   <remove-project name="platform/packages/apps/QuickSearchBox" />
-  <remove-project name="platform/packages/apps/Settings" />
   <remove-project name="platform/packages/modules/TestModule" />
 
   <!-- Prebuilts Repos -->
