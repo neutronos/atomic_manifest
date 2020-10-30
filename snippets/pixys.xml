@@ -2,7 +2,7 @@
 <manifest>
 
   <remote name="pixys"
-          fetch="https://github.com/PixysOS-Beta/"
+          fetch="https://github.com/PixysOS/"
           revision="eleven"
           review="gerrit.pixysos.com" /> 
    
@@ -14,7 +14,12 @@
   <!-- CodeAurora additions -->
   <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="vendor_nxp_opensource_external_libnfc-nci" remote="pixys" />
   <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="vendor_nxp_opensource_packages_apps_Nfc" remote="pixys" />
-  <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" groups="qcom,pdk-qcom" remote="pixys" />
+  <project path="vendor/qcom/opensource/interfaces" name="vendor_qcom_opensource_interfaces" remote="pixys" />
+  <project path="vendor/qcom/opensource/dataservices" name="vendor_qcom_opensource_dataservices" remote="pixys" />
+  <project path="vendor/qcom/opensource/commonsys/packages/apps/Bluetooth" name="vendor_qcom_opensource_commonsys_packages_apps_Bluetooth" groups="qcom,pdk-qcom" remote="pixys" />
+  <project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="vendor_qcom_opensource_bluetooth-commonsys-intf" remote="pixys" />
+  <project path="vendor/qcom/opensource/commonsys/bluetooth_ext" name="vendor_qcom_opensource_commonsys_bluetooth_ext" groups="qcom,pdk-qcom" remote="pixys" />
+  <project path="vendor/qcom/opensource/commonsys/system/bt" name="vendor_qcom_opensource_commonsys_system_bt" groups="qcom,pdk-qcom" remote="pixys" />
 
   <!-- External Repos -->
   <project path="external/selinux" name="external_selinux" remote="pixys" />
@@ -42,5 +47,7 @@
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="pixys" />
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="pixys" /> 
   <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="pixys" />
+
+  <project path="vendor/gapps" name="vendor_gapps_eleven" clone-depth="1" remote="pixys-gitlab" />
 
 </manifest>
