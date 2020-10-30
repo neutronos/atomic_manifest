@@ -34,10 +34,6 @@
   <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="pixys" />
   <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" groups="qcom_wlan" remote="pixys" />
 
-
-  <!-- Prebuilts Repos -->
-  <project path="prebuilts/abi-dumps/ndk" name="prebuilts_abi-dumps_ndk" remote="pixys" />
-
   <!-- System Repos -->
   <project path="system/bt" name="system_bt" groups="pdk" remote="pixys" />
   <project path="system/core" name="system_core" remote="pixys" />
