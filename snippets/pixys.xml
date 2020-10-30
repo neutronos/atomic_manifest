@@ -5,10 +5,6 @@
           fetch="https://github.com/PixysOS/"
           revision="eleven"
           review="gerrit.pixysos.com" /> 
-  
-  <remote name="pixys-gitlab"
-          fetch="https://gitlab.com/PixysOS"
-          revision="eleven" />
    
   <project path="bionic" name="bionic" remote="pixys" />
   <project path="bootable/recovery" name="bootable_recovery" remote="pixys" />
@@ -51,7 +47,5 @@
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="pixys" />
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="pixys" /> 
   <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="pixys" />
-
-  <project path="vendor/gapps" name="vendor_gapps_eleven" clone-depth="1" remote="pixys-gitlab" />
 
 </manifest>
