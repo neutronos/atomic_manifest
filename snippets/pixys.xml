@@ -5,6 +5,10 @@
           fetch="https://github.com/PixysOS/"
           revision="eleven"
           review="gerrit.pixysos.com" /> 
+  
+  <remote name="pixys-gitlab"
+          fetch="https://gitlab.com/PixysOS"
+          revision="eleven" />
    
   <project path="bionic" name="bionic" remote="pixys" />
   <project path="bootable/recovery" name="bootable_recovery" remote="pixys" />
