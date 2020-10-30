@@ -36,7 +36,7 @@
 
 
   <!-- Prebuilts Repos -->
-  <project path="prebuilts/abi-dumps/vndk" name="prebuilts_abi-dumps_vndk" remote="pixys" />
+  <project path="prebuilts/abi-dumps/ndk" name="prebuilts_abi-dumps_ndk" remote="pixys" />
 
   <!-- System Repos -->
   <project path="system/bt" name="system_bt" groups="pdk" remote="pixys" />
